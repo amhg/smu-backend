@@ -23,7 +23,7 @@ public class EmployeeController {
     @Autowired
     EmployeeServiceImpl employeeService;
 
-    @PostMapping("/login")
+    @PostMapping("/loginOld")
     public ResponseEntity<?> loginEmployee(@RequestBody LoginDto loginDto)
     {
         LoginMessage loginResponse = employeeService.loginEmployee(loginDto);
