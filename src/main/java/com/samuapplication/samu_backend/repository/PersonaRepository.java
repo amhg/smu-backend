@@ -10,4 +10,5 @@ public interface PersonaRepository extends JpaRepository<Persona, String> {
     Optional<Persona> findOneByApellido1AndApellido2(String apellido1, String apellido2);
 
     Optional<Persona> findByRfc(String rfc);
+
 }

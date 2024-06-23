@@ -14,6 +14,7 @@ public class PersonaMapper {
         personaDto.setNombre(persona.getNombre());
         personaDto.setApellido1(persona.getApellido1());
         personaDto.setApellido2(persona.getApellido2());
+        personaDto.setPerfil(persona.getPersonPerfil());
         return personaDto;
     }
 

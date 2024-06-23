@@ -9,4 +9,5 @@ public interface PersonaService {
     PersonLoginMessage loginPersona(LoginDto loginDto);
 
     PersonaDto getPersonaByRfc(String rfc);
+
 }

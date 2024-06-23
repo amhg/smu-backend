@@ -6,6 +6,7 @@ import com.samuapplication.samu_backend.exception.NotFoundException;
 import com.samuapplication.samu_backend.mapper.PersonaMapper;
 import com.samuapplication.samu_backend.model.login.PersonLoginMessage;
 import com.samuapplication.samu_backend.model.person.Persona;
+import com.samuapplication.samu_backend.repository.PerfilRepository;
 import com.samuapplication.samu_backend.repository.PersonaRepository;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,8 @@ public class PersonaServiceImpl implements PersonaService{
 
     @Autowired PersonaMapper personaMapper;
     @Autowired PersonaRepository personaRepository;
+
+    @Autowired PerfilRepository perfilRepository;
 
     @Override public PersonLoginMessage loginPersona(final LoginDto loginDto) {
         Optional<Persona> persona =
@@ -36,4 +39,5 @@ public class PersonaServiceImpl implements PersonaService{
         }
 
     }
+
 }

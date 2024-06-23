@@ -10,21 +10,24 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name="persona")
+@Table(name="perfil")
 @Data
-public class Persona {
-
+public class Perfil {
     @Id
     @Column(name = "curp")
     private java.lang.String curp;
     private String rfc;
-    private String nombre;
-    private String apellido1;
-    private String apellido2;
+    private String ocupacion;
+    private String area;
+    private String puesto;
+
+    @Column(insertable=false, updatable=false)
+    private String cluesreal;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "curp")
-     private Perfil personPerfil;
+    @JoinColumn(name = "cluesreal")
+    private Hospital perfilHospital;
 
-    public Persona(){}
+    public Perfil(){
+    }
 }
