@@ -3,6 +3,7 @@ package com.samuapplication.samu_backend.controllers;
 import com.samuapplication.samu_backend.dto.LoginDto;
 import com.samuapplication.samu_backend.dto.PersonaDto;
 import com.samuapplication.samu_backend.model.login.PersonLoginMessage;
+import com.samuapplication.samu_backend.model.person.RegistroPersonal;
 import com.samuapplication.samu_backend.service.PersonaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -37,5 +38,11 @@ public class PersonaController {
             return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(personaDto, HttpStatus.OK);
+    }
+
+    @PostMapping("/persona/registroDia")
+    public void registrarDia(@RequestBody RegistroPersonal registroPersonal){
+        System.out.println("In Registro Dia: " + registroPersonal);
+        personaService.saveRegistroPersonal(registroPersonal);
     }
 }
