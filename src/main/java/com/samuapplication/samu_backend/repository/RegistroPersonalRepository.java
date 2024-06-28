@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RegistroPersonalRepository extends JpaRepository<RegistroPersonal, String> {
+public interface RegistroPersonalRepository extends JpaRepository<RegistroPersonal, Long> {
 
 
 }
