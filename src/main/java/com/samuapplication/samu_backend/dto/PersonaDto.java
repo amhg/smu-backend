@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public class PersonaDto {
-    private String curp;
+    private java.lang.String curp;
     private String rfc;
     private String nombre;
     private String apellido1;

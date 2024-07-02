@@ -26,9 +26,11 @@ public class Persona {
     @JoinColumn(name = "curp")
      private Perfil personPerfil;
 
+    /*
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "curp", nullable=false)
     private RegistroPersonal registroPersonal;
+     */
 
     public Persona(){}
 }
