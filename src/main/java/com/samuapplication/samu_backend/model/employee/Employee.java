@@ -24,6 +24,8 @@ public class Employee {
     private String password;
     //@Enumerated(EnumType.STRING)
     //private EmployeeCategory category;
+    private int salary;
+    private String comments;
 
     public Employee(){}
 
